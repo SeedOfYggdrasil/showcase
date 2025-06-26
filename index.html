@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Caskey | Web Projects Showcase</title>
+    <meta name="description" content="A curated gallery of web applications and projects by AJ Caskey.">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-['Space_Grotesk']">
+    <!-- Background elements -->
+    <div class="background-decor">
+        <div class="blur-circle one"></div>
+        <div class="blur-circle two"></div>
+        <div class="blur-circle three"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="#portfolio" class="flex items-center space-x-3">
+                    <div class="logo-box">AC</div>
+                    <div class="logo-text">AJ Caskey</div>
+                </a>
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 focus:outline-none" aria-label="Toggle Menu">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path id="hamburger" d="M4 6h16M4 12h16M4 18h16"></path><path id="close" d="M6 18L18 6M6 6l12 12" class="hidden"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden fixed top-20 right-4 bg-gray-900/90 backdrop-blur-md rounded-lg p-4 z-40 border border-cyan-500/20">
+        <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Portfolio / Hero Section -->
+        <section id="portfolio" class="pt-28 pb-16 min-h-screen">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl sm:text-5xl font-bold header-text">Examp</h1>
+                    <p class="text-lg text-gray-400 max-w-2xl mx-auto mt-4">A showcase of live web applications.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Project 1 -->
+                    <a href="https://app.h3p.tech" target="_blank" class="project-card">
+                        <div class="iframe-container"><iframe src="https://app.h3p.tech" title="H3P App" loading="lazy"></iframe></div>
+                        <h3 class="project-title">H3P App</h3>
+                    </a>
+                    <!-- Project 2 -->
+                    <a href="https://ai.h3p.tech" target="_blank" class="project-card">
+                        <div class="iframe-container"><iframe src="https://ai.h3p.tech" title="H3P AI" loading="lazy"></iframe></div>
+                        <h3 class="project-title">H3P AI</h3>
+                    </a>
+                    <!-- Project 3 -->
+                    <a href="https://site.h3p.tech" target="_blank" class="project-card">
+                        <div class="iframe-container"><iframe src="https://site.h3p.tech" title="H3P Site" loading="lazy"></iframe></div>
+                        <h3 class="project-title">H3P Site</h3>
+                    </a>
+                    <!-- Project 4 -->
+                    <a href="https://h3p.tech" target="_blank" class="project-card">
+                        <div class="iframe-container"><iframe src="https://h3p.tech" title="H3P Tech" loading="lazy"></iframe></div>
+                        <h3 class="project-title">H3P Tech</h3>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold header-text">Get In Touch</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 mx-auto mt-3"></div>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/mvojoyyl" method="POST" class="max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <input type="text" name="name" placeholder="Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Email" required class="form-input">
+                    </div>
+                    <div class="mb-4">
+                        <textarea name="message" rows="5" placeholder="Message" required class="form-input resize-none"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </div>
+                </form>
+                <div id="form-status" class="text-center mt-4"></div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
